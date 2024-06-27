@@ -1,0 +1,28 @@
+.row {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+#result_box {
+    width: 25%;
+    height: 25%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin: auto;
+}
+
+.center {
+    margin: auto;
+    text-align: center;
+    width: 25%;
+    height: 25%;
+    border: 3px solid green;
+    padding: 10px;
+}
+
+button {
+    width: 100px;
+    padding: 5px;
+    margin: 10px;
+}
