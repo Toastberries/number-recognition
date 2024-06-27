@@ -223,6 +223,7 @@ function loadChart(label, data) {
                 label: "Prediction",
                 backgroundColor: '#f50057',
                 data: data,
+                color: "#aae2af",
             }]
         },
  
