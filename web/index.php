@@ -3,7 +3,7 @@ require "db.php";
 
 if (isset($_POST["submit"])) {
 	$user = $_POST["user"];
-	$guess = $_COOKIE["lastPrediction"];
+	$guess = isset($_COOKIE["lastPrediction"]) ? $_COOKIE["lastPrediction"] : -1;
 	$number = $_POST["number"];
 
 	$query = "INSERT INTO `stats` VALUES (NULL, NULL, IFNULL((SELECT id FROM `users` WHERE `username` = '$user'), 0), '$guess', '$number');";
