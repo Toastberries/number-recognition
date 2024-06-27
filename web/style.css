@@ -5,24 +5,32 @@
 }
 
 #result_box {
-    width: 25%;
-    height: 25%;
     background-color: rgb(255, 255, 255);
-    border-radius: 5px;
     margin: auto;
-}
-
-.center {
-    margin: auto;
-    text-align: center;
-    width: 25%;
-    height: 25%;
-    border: 3px solid green;
-    padding: 10px;
 }
 
 button {
     width: 100px;
     padding: 5px;
     margin: 10px;
+}
+
+.center {
+    margin: auto;
+    text-align: center;
+    border: 3px solid green;
+    padding: 10px;
+}
+
+@media screen and (min-width: 420px) {
+    .center {
+        width: 25%;
+        height: 25%;
+    }
+    #result_box {
+        width: 25%;
+        height: 25%;
+        background-color: rgb(255, 255, 255);
+        margin: auto;
+    }
 }
