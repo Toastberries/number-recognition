@@ -210,7 +210,7 @@ function displayLabel(data) {
 //------------------------------
 var chart = "";
 var firstTime = 0;
-function loadChart(label, data, modelSelected) {
+function loadChart(label, data) {
     var ctx = document.getElementById('chart_box').getContext('2d');
     chart = new Chart(ctx, {
         // The type of chart we want to create
@@ -220,9 +220,8 @@ function loadChart(label, data, modelSelected) {
         data: {
             labels: label,
             datasets: [{
-                label: modelSelected + " prediction",
+                label: "Predictions",
                 backgroundColor: '#f50057',
-                borderColor: 'rgb(255, 99, 132)',
                 data: data,
             }]
         },
@@ -237,15 +236,13 @@ function loadChart(label, data, modelSelected) {
 // drawing from canvas
 //----------------------------
 function displayChart(data) {
-    var select_option = "CNN";
- 
     label = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
     if (firstTime == 0) {
-        loadChart(label, data, select_option);
+        loadChart(label, data);
         firstTime = 1;
     } else {
         chart.destroy();
-        loadChart(label, data, select_option);
+        loadChart(label, data);
     }
     document.getElementById('chart_box').style.display = "block";
 }
