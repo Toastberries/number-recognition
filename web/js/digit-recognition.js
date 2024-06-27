@@ -220,14 +220,18 @@ function loadChart(label, data) {
         data: {
             labels: label,
             datasets: [{
-                label: "Predictions",
+                label: "Prediction",
                 backgroundColor: '#f50057',
                 data: data,
             }]
         },
  
         // Configuration options go here
-        options: {}
+        options: {
+            animation: {
+                duration: 0
+            }
+        }
     });
 }
  
